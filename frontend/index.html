@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aether OS v0.1</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <h1>Aether OS</h1>
+          <p>v0.1 • Multi-Agentes Local</p>
+        </div>
+
+        <section class="panel">
+          <h2>Projeto</h2>
+          <div class="row">
+            <select id="projectSelect"></select>
+            <button id="newProjectBtn" class="secondary">Novo</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="row title-row">
+            <h2>Conversas</h2>
+            <button id="newConversationBtn" class="secondary">+ Nova</button>
+          </div>
+          <ul id="conversationList" class="list"></ul>
+        </section>
+
+        <section class="panel knowledge">
+          <h2>Conhecimento</h2>
+          <ul id="knowledgeList" class="list"></ul>
+        </section>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h2 id="conversationTitle">Selecione ou crie uma conversa</h2>
+            <p id="statusLine">Pronto para colaborar com os especialistas.</p>
+          </div>
+          <div class="badge" id="backendBadge">backend: ...</div>
+        </header>
+
+        <section id="chatArea" class="chat-area"></section>
+
+        <footer class="composer">
+          <div class="controls">
+            <select id="modeSelect">
+              <option value="auto">Automático</option>
+              <option value="expert">Especialista</option>
+            </select>
+            <select id="agentSelect"></select>
+            <button id="debateBtn" class="secondary">🔍 Modo Debate</button>
+            <label class="upload-btn">
+              ⬆ Upload de conhecimento
+              <input id="uploadInput" type="file" accept=".pdf,.txt,.md" hidden />
+            </label>
+          </div>
+
+          <div class="send-row">
+            <textarea id="messageInput" placeholder="Digite sua mensagem..." rows="2"></textarea>
+            <button id="sendBtn">Enviar</button>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="/assets/app.js"></script>
+  </body>
+</html>
